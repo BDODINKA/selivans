@@ -30,6 +30,10 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
         } else scrollToElement('callMeBack', 0)
     }
 
+    const onTelegramClickHandler = () => {
+        router.push('https://t.me/u11wsia')
+    }
+
     const onPortfolioClickHandler = (e: MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault()
         router.push('/portfolio')
@@ -54,8 +58,9 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
                             </div>
                         </nav>
                         <div className={style.buttonsBlock}>
-                            <LinkBtn className={style.buttonTelegram}><img src={telegram_icon.src}
-                                                                           alt="telegram"/></LinkBtn>
+                            <LinkBtn className={style.buttonTelegram} onClick={onTelegramClickHandler}><img
+                                src={telegram_icon.src}
+                                alt="telegram"/></LinkBtn>
                             <LinkBtn className={style.buttonCallback} onClick={onCallMeBackClickHandler}>Заказать
                                 звонок</LinkBtn>
                         </div>
