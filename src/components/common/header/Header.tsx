@@ -4,6 +4,7 @@ import {useRouter} from "next/router";
 import Wrapper from "@/components/common/wrapper";
 import LinkBtn from "@/components/common/buttons/LinkBtn";
 import logo from '../../../assets/svg/Logo.svg'
+import telegram_icon from '../../../assets/svg/telegram.svg'
 import style from '../../../styles/components/header.module.scss'
 import {scrollToElement} from "@/utils/scrollToElement";
 
@@ -29,6 +30,10 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
         } else scrollToElement('callMeBack', 0)
     }
 
+    const onTelegramClickHandler = () => {
+        router.push('https://t.me/u11wsia')
+    }
+
     const onPortfolioClickHandler = (e: MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault()
         router.push('/portfolio')
@@ -52,8 +57,13 @@ const Header: React.FC<{ isMainPage: boolean, currentPage: string }> = ({isMainP
                                 <Link href='/#' onClick={onPortfolioClickHandler}>Портфолио</Link>
                             </div>
                         </nav>
-                        <LinkBtn className={style.buttonCallback} onClick={onCallMeBackClickHandler}>Заказать
-                            звонок</LinkBtn>
+                        <div className={style.buttonsBlock}>
+                            <LinkBtn className={style.buttonTelegram} onClick={onTelegramClickHandler}><img
+                                src={telegram_icon.src}
+                                alt="telegram"/></LinkBtn>
+                            <LinkBtn className={style.buttonCallback} onClick={onCallMeBackClickHandler}>Заказать
+                                звонок</LinkBtn>
+                        </div>
 
                     </div>
                 </div>

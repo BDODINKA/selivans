@@ -28,28 +28,29 @@ const DesignerTasks = () => {
                     </div>
                 </div>
 
-                <div className={style.visual}>
-                    <div className={style.visualTitle}>Контент+визуал</div>
-                    <div className={style.visualDescription}>
-                        <div className={style.visualText}> Идеальное соотношение текста и графики дает грамотное
-                            визуальное представление сайта. Работаем
-                            в минимализме, акцентировано ведем пользователя сквозь текст. В наших сайтах тексты и
-                            графика не
-                            противоречат друг другу, а поддерживают концепцию, гармонично сочетаясь между собой, даже
-                            если
-                            графики «много»
-                        </div>
-                        <div className={style.visualButtonWrapper}>
-                            <FullButton className={style.visualButton}>Заполнить анкету</FullButton>
-                        </div>
-                    </div>
 
-                    <div className={style.background}>
-                        <img src={waves.src} alt="design" className={style.waves}/>
+            </div>
+            <div className={style.visual}>
+                <div className={style.visualTitle}>Контент+визуал</div>
+                <div className={style.visualDescription}>
+                    <div className={style.visualText}> Идеальное соотношение текста и графики дает грамотное
+                        визуальное представление сайта. Работаем
+                        в минимализме, акцентировано ведем пользователя сквозь текст. В наших сайтах тексты и
+                        графика не
+                        противоречат друг другу, а поддерживают концепцию, гармонично сочетаясь между собой, даже
+                        если
+                        графики «много»
                     </div>
-
-                    <img src={wavesMob.src} alt="design" className={style.wavesMob}/>
+                    <div className={style.visualButtonWrapper}>
+                        <FullButton className={style.visualButton}>Заполнить анкету</FullButton>
+                    </div>
                 </div>
+
+                <div className={style.background}>
+                    <img src={waves.src} alt="design" className={style.waves}/>
+                </div>
+
+                <img src={wavesMob.src} alt="design" className={style.wavesMob}/>
             </div>
 
         </Wrapper>
