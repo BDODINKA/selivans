@@ -133,109 +133,110 @@
       }
     }
 
-    .visual {
-      position: relative;
-      padding-top: 95px;
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 80px;
+
+  }
+
+  .visual {
+    position: relative;
+    padding-top: 95px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+    @media (max-width: 1439px) {
+      padding-top: 90px;
+      padding-bottom: 0;
+    }
+
+    .wavesMob {
+      display: none;
+
+      @media (max-width: 965px) {
+        display: block;
+        position: absolute;
+        left: -20px;
+        top: 70px;
+        width: 120%;
+      }
+    }
+
+
+    .visualTitle {
+      z-index: 1;
+      align-self: center;
+      @include Text-FS-FW-LH(110px, 700, 97.2%);
       @media (max-width: 1439px) {
-        padding-top: 90px;
-        padding-bottom: 0;
+        @include Text-FS-FW-LH(64px, 700, 97.2%);
       }
-
-      .wavesMob {
-        display: none;
-
-        @media (max-width: 965px) {
-          display: block;
-          position: absolute;
-          left: -20px;
-          top: 70px;
-          width: 120%;
-        }
+      @media (max-width: 965px) {
+        @include Text-FS-FW-LH(48px, 700, 94.7%);
+        background: linear-gradient(180deg, #FFFFFF 21.38%, rgba(255, 255, 255, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
-
-
-      .visualTitle {
-        z-index: 1;
-        align-self: center;
-        @include Text-FS-FW-LH(110px, 700, 97.2%);
-        @media (max-width: 1439px) {
-          @include Text-FS-FW-LH(64px, 700, 97.2%);
-        }
-        @media (max-width: 965px) {
-          @include Text-FS-FW-LH(48px, 700, 94.7%);
-          background: linear-gradient(180deg, #FFFFFF 21.38%, rgba(255, 255, 255, 0) 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-        @media (max-width: 400px) {
-          @include Text-FS-FW-LH(42px, 700, 94.7%);
-        }
-
-      }
-
-      .visualDescription {
-        z-index: 1;
-        align-self: end;
-        padding-top: 210px;
-        max-width: 679px;
-        @media (max-width: 1439px) {
-          padding-top: 100px;
-          align-self: center;
-        }
-        @media (max-width: 965px) {
-          padding-top: 11px;
-          max-width: 100%;
-          text-align: center;
-        }
-
-
-        .visualText {
-          padding-bottom: 30px;
-          @include Text-FS-FW-LH(18px, 400, 150%);
-          @media (max-width: 1439px) {
-            padding-bottom: 40px;
-            max-width: 503px;
-          }
-          @media (max-width: 965px) {
-            @include Text-FS-FW-LH(14px, 400, 160%);
-          }
-        }
-
-        .visualButtonWrapper {
-          @media (max-width: 965px) {
-            display: flex;
-            justify-content: center;
-          }
-
-          .visualButton {
-            z-index: 1;
-          }
-        }
-
-
-      }
-
-      .background {
-        z-index: 0;
-
-        .waves {
-          z-index: 0;
-          position: absolute;
-          bottom: 100px;
-          left: 0;
-          max-width: 100%;
-          @media (max-width: 965px) {
-            display: none;
-          }
-        }
-
+      @media (max-width: 400px) {
+        @include Text-FS-FW-LH(42px, 700, 94.7%);
       }
 
     }
-  }
 
+    .visualDescription {
+      z-index: 1;
+      align-self: end;
+      padding-top: 210px;
+      max-width: 679px;
+      @media (max-width: 1439px) {
+        padding-top: 100px;
+        align-self: center;
+      }
+      @media (max-width: 965px) {
+        padding-top: 11px;
+        max-width: 100%;
+        text-align: center;
+      }
+
+
+      .visualText {
+        padding-bottom: 30px;
+        @include Text-FS-FW-LH(18px, 400, 150%);
+        @media (max-width: 1439px) {
+          padding-bottom: 40px;
+          max-width: 503px;
+        }
+        @media (max-width: 965px) {
+          @include Text-FS-FW-LH(14px, 400, 160%);
+        }
+      }
+
+      .visualButtonWrapper {
+        @media (max-width: 965px) {
+          display: flex;
+          justify-content: center;
+        }
+
+        .visualButton {
+          z-index: 1;
+        }
+      }
+
+
+    }
+
+    .background {
+      z-index: 0;
+
+      .waves {
+        z-index: 0;
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        max-width: 100%;
+        @media (max-width: 965px) {
+          display: none;
+        }
+      }
+
+    }
+
+  }
 
 }
