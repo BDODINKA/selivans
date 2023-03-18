@@ -36,6 +36,7 @@ const OurProjects: React.FC<{ portfolio: PortfolioType[] }> = ({portfolio}) => {
         const startIndex = (pageNumber - 1) * pageSize;
         const slice = portfolio.slice(startIndex, startIndex + pageSize);
         setSliced(slice)
+        scrollTo(0, 0)
     };
 
     return (
